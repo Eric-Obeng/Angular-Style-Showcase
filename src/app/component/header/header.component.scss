@@ -1,0 +1,94 @@
+@use "../../../../styles/base/variables";
+@use "../../../../styles/abstracts/mixins";
+@import "../../../../styles/abstracts/buttons";
+
+header {
+  width: 100%;
+  height: 100vh;
+
+  .header-wrapper {
+    height: 100%;
+    padding: 2.4rem 8rem;
+    @include flex-layout(column, center, center, 1.5rem);
+
+    .col-1 {
+      @include flex-layout(row, center, center, 2rem);
+      width: 100%;
+      height: 10rem;
+
+      .col-1__logo {
+        @include flex-layout(row, center, space-between);
+        width: 100%;
+
+        .logo-div {
+          // width: 30rem;
+
+          h1 {
+            font-size: $ft-size-m;
+            font-weight: 700;
+          }
+        }
+
+        .btn {
+          @include button(inherit, none, var(--text));
+          border: 0.3rem solid var(--text);
+        }
+      }
+
+      .theme-icon {
+        cursor: pointer;
+        margin-left: 20rem;
+      }
+    }
+
+    .col-2 {
+      width: 100%;
+      // height: 70vh;
+      @include flex-layout(row, start, start, 2rem);
+      padding: 0 1.2rem;
+
+      .text {
+        @include flex-layout(column, start, center, 5rem);
+        width: 60%;
+        height: 100%;
+
+        h1 {
+          font-size: 7rem;
+          font-weight: 700;
+          width: 70%;
+        }
+
+        p {
+          font-size: $ft-size-m;
+          width: 70%;
+        }
+
+        .btn {
+          @include button(_, var(--button), var(--button-text));
+          font-weight: 600;
+          width: 30rem;
+          transition: all .3s ease;
+
+          &:hover {
+            box-shadow: 3px 3px 0px 0px var(--accent);
+          }
+        }
+      }
+
+      .illustrator-div {
+        width: 40%;
+      }
+    }
+
+    .col-3 {
+      width: 100%;
+      @include flex-layout(row, center, space-between, null);
+      margin-top: 2rem;
+
+      img {
+        width: 10rem;
+        margin-right: 10rem;
+      }
+    }
+  }
+}
