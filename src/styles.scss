@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+//#DCFF8C
+@import "../styles/base/reset";
+@import "../styles/abstracts/mixins";
+@import "../styles/base/variables";
+@import "../styles/theme/theme";
+@import "../styles/base/typography";
+
+:root {
+  @each $key, $value in $light-mode {
+    --#{$key}: #{$value};
+  }
+}
+
+.dark-mode {
+  @each $key, $value in $dark-mode {
+    --#{$key}: #{$value};
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
