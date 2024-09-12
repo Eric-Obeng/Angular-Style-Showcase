@@ -1,0 +1,11 @@
+@import "../../../../styles/abstracts/mixins";
+@import "../../../../styles/base/variables";
+@import '../../../../styles/abstracts/functions';
+
+footer {
+  width: 100%;
+  @include flex-layout(row, center, center, null);
+  font-size: px-to-rem(40);
+  padding: 2rem;
+  height: 30rem;
+}
