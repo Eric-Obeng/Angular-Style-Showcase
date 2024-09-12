@@ -1,0 +1,107 @@
+@import "../../../../../styles/abstracts/mixins";
+@import "../../../../../styles/base/variables";
+
+%bold {
+  font-weight: 700;
+  font-size: $ft-size-lg;
+}
+
+%medium {
+  font-weight: 600;
+  font-size: $ft-size-s;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services {
+  height: 100vh;
+  width: 100%;
+  padding: 10rem 8rem;
+  @include flex-layout(column, start, start, 4rem);
+
+  .col-1 {
+    @include flex-layout(row, center, start, 2rem);
+    width: 100%;
+
+    h1 {
+      background-color: var(--accent);
+      color: $dark-bg;
+      padding: 0.5rem;
+      @extend %bold;
+    }
+
+    p {
+      @extend %medium;
+    }
+  }
+
+  .col-2 {
+    width: 100%;
+    flex: 1;
+
+    .content {
+      @include flex-layout(row, start, space-between, 2rem);
+      border: 0.5rem solid var(--text);
+      // height: 70%;
+      padding: 10rem 20rem;
+      border-radius: 2rem;
+
+      .title {
+        @extend %bold;
+        background-color: var(--accent);
+        color: $dark-bg;
+        padding: 2rem;
+      }
+
+      .img-div {
+        width: 50rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    @include flex-layout(column, start, space-between, 5rem);
+    padding: 1rem;
+    margin-top: 10rem;
+
+    .col-1 {
+      @include flex-layout(column, start, start, 2rem);
+    }
+
+    .col-2 {
+      width: 100%;
+      flex: 1;
+
+      .content {
+        padding: 5rem 3rem;
+        border-radius: 2rem;
+        @include flex-layout(column, start, start, 2rem);
+
+        .title {
+          @extend %bold;
+          background-color: var(--accent);
+          color: $dark-bg;
+          padding: 1rem;
+        }
+
+        .img-div {
+          width: 30rem;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
