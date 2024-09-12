@@ -1,6 +1,10 @@
-<main>
+<main class="main-content">
   <div>
-    <app-our-services />
-    <app-case-study />
+    <div appIntersectionObserver (visible)="onOurServicesVisible($event)">
+      <app-our-services *ngIf="ourServicesVisible"></app-our-services>
+    </div>
+    <div appIntersectionObserver (visible)="onCaseStudyVisible($event)">
+      <app-case-study *ngIf="caseStudyVisible"></app-case-study>
+    </div>
   </div>
 </main>
