@@ -1,0 +1,24 @@
+@import "../base/variables";
+
+
+$light-mode: (
+  "background": $light-bg,
+  "accent": $green-accent,
+  "text": $dark-bg,
+  "card-clr": $dark-bg,
+  "card-clr-w": $light-bg,
+  "button": $dark-bg,
+  "button-text": $light-bg,
+
+);
+
+$dark-mode: (
+  "background": $dark-bg,
+  "accent": $green-accent,
+  "text": $white,
+  "card-clr-d": $dark-bg,
+  "card-clr": $light-bg,
+  "button": $light-bg,
+  "button-text": $dark-bg,
+
+);

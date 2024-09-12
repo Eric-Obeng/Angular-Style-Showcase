@@ -1,0 +1,22 @@
+@mixin theme-aware($key, $property) {
+  #{$property}: var(--#{$key});
+}
+
+@mixin flex-layout(
+  $direction: row,
+  $align: flex-start,
+  $justify: flex-start,
+  $gap: 1rem
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin button($height: null, $bg, $clr) {
+  height: $height;
+  background: $bg;
+  color: $clr;
+}

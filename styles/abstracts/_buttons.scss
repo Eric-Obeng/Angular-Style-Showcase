@@ -1,0 +1,12 @@
+@import "../base/variables";
+
+.btn {
+  border-radius: 1rem;
+  border: 0.3rem solid transparent;
+  font-family: inherit;
+  font-size: $ft-size-m;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.7rem;
+
+}

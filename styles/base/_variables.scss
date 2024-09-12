@@ -1,0 +1,16 @@
+@import "../abstracts/mixins";
+
+$light-bg: #f5f5f5;
+$dark-bg: #1e1e1e;
+$white: #ffffff;
+
+$green-accent: #dcff8c;
+
+$ft-size-lg: 4rem;
+$ft-size-m: 2.4rem;
+$ft-size-s: 1.8rem;
+$ft-size-xs: 1.4rem;
+
+@function theme-value($key, $theme: $light-mode) {
+  @return map-get(map-get($theme, $key), $key);
+}
